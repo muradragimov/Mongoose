@@ -1,0 +1,12 @@
+<nav>
+    <div>
+     <a href="/pages">Home</a>
+     <a href="/routes/register">Register</a>
+     <% if(!cookies){ %>
+       <a href="/routes/login">Login</a>
+       <% } %>
+       <% if(cookies){ %>
+        <a href="/pages/logout">Logout</a>
+        <%  } %>
+    </div>
+</nav>

@@ -1,0 +1,51 @@
+<html lang="en">
+   
+    <%- include('./partials/header.ejs') %> 
+    
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+</br>
+<div class='part'>
+    <fieldset>
+      <legend>Register</legend>
+         <form method="POST" action="/routes/register">
+           <label for="username">First name:</label>
+            <input name='username' type='text'/>
+           <label for="email">Email:</label>
+           <input name='email' type='email'/>
+           <label for="password">Email:</label>
+         <input name='password' type='password'/>
+    </br>
+</br>
+       <button>Submit</button>
+    </form>
+</fieldset>
+    <br>
+    <% if(user){ %>
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= report %> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+        <% }%>
+     
+    <%- include('./partials/footer.ejs') %>
+</div>
+
+<script>
+    $(document).ready(function(){
+   
+     $('.alert').alert()
+    
+    })
+     console.log(document.querySelector('.alert'))
+
+
+    
+</script>
+</body>
+</html>
